@@ -1,3 +1,8 @@
 <script type="text/discourse-plugin" version="0.8">
-    console.log(Discourse)
+  $( document ).ready(function() {
+    const user = api.getCurrentUser(),
+      username = user.username;
+
+    $('h1.hello-world').html('Hello there '+username+"!")
+  });
 </script>
